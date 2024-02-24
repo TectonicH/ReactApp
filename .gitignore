@@ -1,0 +1,8 @@
+# ignore ALL .log files
+*.log
+*.env
+backend/node_modules
+reddit-favourites/node_modules/
+
+# ignore ALL files in ANY directory named temp
+temp/
