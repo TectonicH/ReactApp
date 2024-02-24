@@ -2,8 +2,11 @@ require('dotenv').config();
 const express = require('express');
 const axios = require('axios');
 const querystring = require('querystring');
+const  cors = require('cors');
 
 const app = express();
+
+app.use(cors());
 
 app.get('/auth/reddit', (req, res) => {
   const state = generateRandomString(16); // Generating a random string and verify it in the callback to prevent CSRF attacks
